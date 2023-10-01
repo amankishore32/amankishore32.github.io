@@ -6,16 +6,103 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.color_highlight{
+    color: #ff4a57;
 }
 
 body{
-   
+   /* background-color: black; */
+    --dot-bg: rgba(0, 0, 0, 1);
+    --dot-color: rgb(126, 126, 126);
+    --dot-size: 1px;
+    --dot-space: 25px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+#profile_image_container{
+    height: 100vh;
+    width: 480px;
+    position: absolute;
+    right: 13%;
+    top: 0;
+    z-index: -99999;
+    box-shadow: inset 0px 0px 20px 10px black;
+    background-image: url("../assets/profile_image.jpg") ;
+    background-size: contain;
 }
 
 #main-container{
-    border: 1px solid red;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100vw;
+    color: white;
 }
 
-.row > div{
-    border: 1px solid red;
+#hi_msg{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    /* border: 1px solid red; */
+}
+
+#last_name{
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding-left: 10px;
+}
+
+#first_middle_name{
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin-top: 5px;
+}
+
+#designation{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 12.6px;
+    margin-top: 10px;
+}
+
+#social_links{
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+}
+
+#social_links_title{
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+#social_links img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+#social_info{
+    font-size: 10px;
+    font-weight: 200;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: silver;
 }
