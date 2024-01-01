@@ -15,40 +15,64 @@ a{
 
 .color_highlight{
     color: #ff4a57;
+    -webkit-transition: 1s ease-in-out;
+        transition: 1s;
+}
+
+.color_highlight.clicked{
+    color: blue;
 }
 
 body{
    /* background-color: black; */
-    --dot-bg: rgba(0, 0, 0, 1);
+    --dot-bg: black;
     --dot-color: rgb(126, 126, 126);
     --dot-size: 1px;
     --dot-space: 25px;
-    background:
-        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color);
+    background-color: black;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s;
+}
+
+body.clicked{
+    --dot-bg: white;
+        --dot-color: rgb(126, 126, 126);
+        --dot-size: 1px;
+        --dot-space: 25px;
+        background-color: white;
 }
 
 #profile_image_container{
-    height: 100vh;
-    width: 480px;
+    height: 300px;
+    width: 230px;
     position: absolute;
-    right: 13%;
-    top: 0;
+    right: 25%;
+    top: 25%;
     z-index: -99999;
-    box-shadow: inset 0px 0px 20px 10px black;
+    box-shadow: inset 0px 0px 20px 20px black;
     background-image: url("../assets/profile_image.jpg") ;
     background-size: contain;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s;
+}
+
+#profile_image_container.clicked{
+    box-shadow: inset 0px 0px 20px 20px white;
 }
 
 #main-container{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100vh;
-    width: 100vw;
+    /* position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    /* height: 100vh;
+    width: 100vw;*/
     color: white;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s;
 }
 
+#main-container.clicked{
+    color: black;
+}
 #hi_msg{
     position: absolute;
     top: 30%;
